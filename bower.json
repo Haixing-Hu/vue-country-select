@@ -1,7 +1,7 @@
 {
   "name": "vue-select",
   "description": "A Vue.js component implementing the select control used to select countries.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [
     "Vue.js",
     "component",
