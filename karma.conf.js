@@ -1,5 +1,6 @@
 // Karma configuration
 var VueLoader = require('vue-loader');
+var BowerWebpackPlugin = require("bower-webpack-plugin");
 
 module.exports = function (config) {
   var settings = {
@@ -14,7 +15,13 @@ module.exports = function (config) {
     files: [
       "./lib/jquery/dist/jquery.min.js",
       "./lib/select2/dist/js/select2.min.js",
-      "./test/specs/**/*.js"
+      "./test/specs/**/*.js",
+      {
+        pattern: "./test/specs/i18n/*.json",
+        watched: false,
+        included: false,
+        served: true
+      }
     ],
 
     // list of files to exclude
@@ -38,10 +45,24 @@ module.exports = function (config) {
         ],
         postLoaders: [{
           test: /\.js$/,
-          exclude: /test|node_modules/,
+          exclude: /test|node_modules|lib/,
           loader: 'istanbul-instrumenter'
         }]
-      }
+      },
+      resolve: {
+        root: [__dirname],
+        modulesDirectories: [ "lib", "node_modules" ]
+      },
+      plugins: [
+        // new webpack.optimize.DedupePlugin(),
+        new BowerWebpackPlugin({
+          modulesDirectories: [ "lib" ],
+          manifestFiles:      "bower.json",
+          includes:           /.*/,
+          excludes:           [],
+          searchResolveModulesDirectories: true
+        })
+      ]
     },
 
     webpackMiddleware: {
