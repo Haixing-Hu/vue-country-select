@@ -45,7 +45,7 @@ module.exports = function (config) {
         }],
         postLoaders: [{
           test: /\.js$/,
-          exclude: /test|node_modules|lib|value-text-matcher.js/,
+          exclude: /test|node_modules|lib|countries.js/,
           loader: 'istanbul-instrumenter'
         }]
       },

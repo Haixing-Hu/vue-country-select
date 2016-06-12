@@ -1,5 +1,5 @@
 /*!
- * vue-country-select v0.2.0
+ * vue-country-select v0.2.2
  * (c) 2016 Haixing Hu
  * Released under the MIT License.
  */
