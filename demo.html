@@ -14,12 +14,28 @@
   <div class="container" id="app">
     <div class="form-horizontal">
       <div class="form-group">
+        <!-- <label for="language-select" class="col-sm-3 control-label">
+          Select language:
+        </label>
+        <div class="col-sm-5">
+          <select v-model="language" name="language-select">
+            <option value="en-US">US English</option>
+            <option value="zh-CN">Simplified Chinese</option>
+            <option value="zh-TW">Traditional Chinese</option>
+            <option value="js-JP">Japanese</option>
+          </select>
+        </div>
+        <div class="col-sm-4">
+          <p class="form-control-static">
+            Selected language: <span class="vue-result">{{language}}</span>
+          </p>
+        </div> -->
         <label for="country-select" class="col-sm-3 control-label">
           Select country:
         </label>
         <div class="col-sm-5">
-          <vue-country-select class="vue-country-select" name="country-select"
-                              model="{{@ result}}" language="en-US">
+          <vue-country-select name="country-select"
+                              :model.sync="result" language="en-US">
           </vue-country-select>
         </div>
         <div class="col-sm-4">
