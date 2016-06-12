@@ -6,6 +6,8 @@
  * @param searchable
  *    the optional flag indicates whether to show the search box. Default
  *    value is true.
+ * @param name
+ *    the optional name of the selection control.
  * @param language
  *    the optional code of language used by the select2 plugin. If it is not set,
  *    and the [vue-i18n](https://github.com/Haixing-Hu/vue-i18n) plugin is used,
@@ -20,8 +22,8 @@
 module.exports = {
   replace: true,
   inherit: false,
-  template: "<vue-select model='{{@ model}}' options='{{countries}}' theme='{{theme}}'" +
-            "searchable='{{searchable}}' language='{{language}}'></vue-select>",
+  template: "<vue-select :name='name' :model.sync='model' :options='countries' :theme='theme'" +
+            ":searchable='searchable' :language='language'></vue-select>",
   components: {
     "vue-select": require("vue-select")
   },
@@ -34,6 +36,11 @@ module.exports = {
       type: Boolean,
       required: false,
       default: true
+    },
+    name: {
+      type: String,
+      required: false,
+      default: ""
     },
     language: {
       type: String,

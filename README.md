@@ -16,9 +16,9 @@ The demo page is [HERE](http://haixing-hu.github.io/vue-country-select/demo.html
 
 # Requirements
 
-- [Vue.js](https://github.com/yyx990803/vue) `^0.12.0`
-- [vue-select](https://github.com/Haixing-Hu/vue-select) `^0.1.4`
-- [vue-i18n-plugin](https://github.com/Haixing-Hu/vue-i18n) `>=0.1.3` This is optional.
+- [Vue.js](https://github.com/yyx990803/vue) `^1.0.24`
+- [vue-select](https://github.com/Haixing-Hu/vue-select) `^0.2.3`
+- [vue-i18n-plugin](https://github.com/Haixing-Hu/vue-i18n) `^0.2.2` This is optional.
 
 # Instllation
 
@@ -467,13 +467,13 @@ $ gulp test:coveralls
 You can also run `bower install` and `gulp build` together with the following
 command:
 ```shell
-npm build
+npm run build
 ```
 
 Or run `bower install` and `gulp test:coveralls` together with the following
 command:
 ```shell
-npm test
+npm run test
 ```
 
 # License

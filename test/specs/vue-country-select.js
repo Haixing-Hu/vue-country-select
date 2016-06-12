@@ -6,7 +6,7 @@ var Countries = require("../../src/countries.js");
 
 function getVM(rootId, initResult) {
   return Vue.extend({
-    template: "<div><vue-country-select v-ref='select' model='{{@result}}'></vue-country-select></div>",
+    template: "<div><vue-country-select v-ref='select' :model.sync='result'></vue-country-select></div>",
     el: function() {
       var el = document.createElement("div");
       el.id = rootId;
