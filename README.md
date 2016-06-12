@@ -47,7 +47,7 @@ The HTML snippets are as follows:
       </label>
       <div class="col-sm-5">
         <vue-country-select class="vue-country-select" name="country-select"
-                            model="{{@ result}}" language="en-US">
+                            :model.sync="result" language="en-US">
         </vue-country-select>
       </div>
       <div class="col-sm-4">
